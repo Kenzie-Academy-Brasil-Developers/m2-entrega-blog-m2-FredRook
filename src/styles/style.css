@@ -1,0 +1,142 @@
+header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 9rem;
+
+    background-color: rgba(var(--color-azul-claro), 1)
+
+}
+
+.headerImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8rem;
+    height: 8rem;
+    margin: 0.5rem 0.5rem;
+    border: 1px solid white;
+    border-radius: 10rem;
+}
+
+.headerNome .nomeP{
+    font: var(--font-montserrat);
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: rgba(var(--color-branco-fundo-cards), 1);
+    padding: 1rem;
+}
+
+.headerBtn{
+    display: flex;
+    margin: 0 85%;    
+}
+
+.btnLogin {
+    width: 10rem;
+    height: 2.6rem;
+    font: var(--font-montserrat);
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: rgba(var(--color-branco-fundo-cards));
+    background-color: rgba(var(--color-marrom-claro), 1);
+    border-radius: 0.6rem;   
+}
+
+/* //////////////////// MAIN E UL //////////////////// */
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    background-color: rgba(var(--color-cinza-fundo), 1);
+}
+
+main > .tagUl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: inherit;
+    height: inherit;
+    max-height: inherit;
+    background-color: inherit;
+}
+
+/* ///////////////////// BOX TEXTO /////////////////// */
+
+.boxTexto{
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.inputTexto{
+    display: flex;
+    align-items: center;
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    margin-top: 2.5rem;
+    width: 120rem;
+    height: 20rem;
+    background-color: rgba(var(--color-branco-fundo-cards), 1);
+}
+
+/* ///////////////////// BOX POSTS /////////////////// */
+
+.posts{
+    display: flex;
+    width: 120rem;
+    max-width: 100%;
+    height: 20rem;
+    max-height: 100%;
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    margin-top: 2.5rem;
+    width: 120rem;
+    height: 23.5rem;
+    background-color: rgba(var(--color-branco-fundo-cards), 1);
+}
+
+.imgUsuario{
+    display: flex;
+    width: 10rem;
+    height: 10rem;
+    margin: 0.5rem 0.5rem;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10rem;
+    overflow: hidden;
+}
+
+.usuarioPost{
+    display: flex;
+    flex-direction: column;
+    width: 95rem;
+    max-width: 100%;
+    height: 21.5rem;
+    max-height: 100%;
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+.usuarioNickName{
+    display: flex;
+    font: var(--font-montserrat);
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: rgba(var(--color-preto-nomes), 1);
+    margin-bottom: 2rem;
+}
+
+.textUsuario{
+    display: flex;
+    font: var(--font-roboto);
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: rgba(var(--color-preto-nomes), 1);
+    margin-top: -0.8rem;
+}

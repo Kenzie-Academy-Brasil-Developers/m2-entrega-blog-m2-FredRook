@@ -6,12 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog M2</title>
 
-  <link rel="stylesheet" href="./src/styles/reset.css">
-  <link rel="stylesheet" href="./src/styles/Base.css">
-  <link rel="stylesheet" href="./src/styles/style.css">
-  <link rel="stylesheet" href="./src/styles/Style.Cadastro.Modal.css">
-  <link rel="stylesheet" href="./src/styles/Style.Modal.Login.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="../styles/reset.css">
+  <link rel="stylesheet" href="../styles/Base.css">
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/Style.Modal.Login.css">
+  <link rel="stylesheet" href="../styles/Style.Cadastro.Modal.css">
 
+  <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
@@ -21,15 +23,15 @@
 <body>
 
   <header>
-    <img class="headerImg" src="./src/Images/Gato.jpg" alt="GatoFofo">
+  <!--   <img class="headerImg" src="../Images/Gato.jpg" alt="GatoFofo">
 
     <div class="headerNome">
       <p class="nomeP">GatinhoFofo</p>
     </div>
 
     <section class="headerBtn">
-      <button class="btnLogin">Logout</button>
-    </section>
+      <button class="btnLogin">Login</button>
+    </section> -->
 
   </header>  
 
@@ -41,11 +43,11 @@
 
       <div class="posts">
         <div class="imgUsuario">
-          <img src="./src/Images/Gato 2.png" alt="">
+          <img src="../Images/Gato 2.png" alt="">
         </div>
 
         <div class="usuarioPost">
-          <h1 class="usuarioNickName">GatinhoFofo</h1>
+          <h1 class="usiarioNickName">GatinhoFofo</h1>
           <p class="textUsuario">Lorem ipsum dolor sit amet. Et iste labore ut similique 
             consequuntur et consequuntur harum est repellendus quia 33 tempore similique. 
             Nam reprehenderit vero eos maxime consequatur At nihil facere vel quam nemo eum 
@@ -53,17 +55,49 @@
             Lorem ipsum dolor sit amet. Et iste labore ut similique 
             consequuntur et consequuntur harum est repellendus quia 33 tempore similique.</p>
         </div>
+
+        <!--  <div class="data">
+          <input type="date" name="Data" id="">
+        </div> -->
       </div>
     </ul>
+
+    <div class="modal modal__login">
+        <div class="container">
+            <div class="modal__inner">
+                <button type="button" class="modal__close">
+                    <figure>
+                        <img src="../Assets/icons8-excluir.svg" alt="Fechar!">
+                    </figure>
+                </button>
+
+                <h2>Login</h2>
+
+                <form class="modal__form">
+                    <input type="email" name="email" id="email" placeholder="E-mail">
+                    <input type="password" name="password" id="password"
+                    placeholder="Senha">
+                    <button type="button" class="button button__primary button--marrom">Login</button>
+                </form>
+
+                <p>Não tem cadastro? <a href="#">Clique aqui</a> para se cadastrar!</p>
+            </div>
+        </div>
+    </div>
 
   </main>
 
 </body>
 
-<script type="module" src="./src/Controllers/HomePage.js"></script>
+<!-- CONTROLERS -->
+<script src="../Controllers/HomePage.js"></script>
+<script src="../Controllers/User.Controllers.js"></script>
+<script src="../Controllers/Login.Controllers.js"></script>
 
-<script type="module" src="./src/Script/Script.js"></script>
+<!-- SCRIPT -->
+<script src="../Script/Script.js" ></script>
 
-<script type="module" src="./src/Script/Script.js"></script>
+<!-- MODELS -->
+<script src="../Models/Header.Users.Models.js"></script>
 
 </html>

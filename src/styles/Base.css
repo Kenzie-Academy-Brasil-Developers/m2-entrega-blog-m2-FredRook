@@ -1,0 +1,12 @@
+:root{
+    --color-azul-claro: 100, 149, 237;
+    --color-cinza-fundo: #F9F9F9;
+    --color-cinza-claro: 243, 243, 243;
+    --color-marrom-claro: 237, 188, 100;
+    --color-preto-nomes: 0, 0, 0;
+    --color-preto-letras: 95, 92, 92;
+    --color-branco-fundo-cards: 255, 255, 255;
+
+    --font-roboto: 'Roboto', sans-serif;
+    --font-montserrat:'Montserrat Alternates', sans-serif;
+}
