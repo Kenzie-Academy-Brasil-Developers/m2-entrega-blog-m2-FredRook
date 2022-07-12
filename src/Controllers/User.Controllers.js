@@ -2,15 +2,15 @@ export default class UserRequest {
     static base_url = "https://blog-m2.herokuapp.com/users/register"
     static base_url_newPost = "https://blog-m2.herokuapp.com/posts"
     static base_url_searchPostById = "https://blog-m2.herokuapp.com/posts/{id}"
-    static base_url_pegueAllPosts ="https://blog-m2.herokuapp.com/ /posts?page=1"
-    static guardarToken = JSON.parse(localStorage.getItem("@Blog-Kenzie:token"))
+    static base_url_pegueAllPosts ="https://blog-m2.herokuapp.com/posts?page=1"
+    static guardarToken = localStorage.getItem("@Blog-Kenzie:token")
     static headers = {
             "Content-Type":"application/json",
-            Authorization: `Bearer ${this.guardarToken}` // PERGUNTAR SOBRE O AUTORI... E O BEARER, PQ TÁ DIFERENTE NO API BLOG
+            "Authorization": `Bearer ${JSON.parse(this.guardarToken)}`
     }
 
 //////// CRIA O USUÁRIO ////////
-    static async createUser(createUserData){
+    static   async createUser(createUserData){
         return await fetch(this.base_url, {
             method: "POST",
             headers:this.headers,
@@ -87,10 +87,12 @@ export default class UserRequest {
         return await fetch(this.base_url_pegueAllPosts, {
             method: "GET",
             headers: this.headers,
-        }
+        })
         .then(res => res.json())
-        .catch(err => console.log(err)))
+        .then(res => res)
+        .catch(err => console.log(err))
     }
+
 
     static async getUsersAllPosts(){
 

@@ -6,7 +6,7 @@ export default class ComponentsDom{
     static body = document.querySelector("body");
     static main = document.querySelector("main");
 
-    static header() {
+    static header(avatarUrl, username) {
         const header = document.querySelector("header");
 
         const img    = document.createElement("img");
@@ -21,8 +21,10 @@ export default class ComponentsDom{
         section.classList.add("headerBtn");
         button.classList.add("btnLogin");
 
-        img.src = "./src/Images/Gato.jpg"; //COLOCAR O AVATAR DO USUARIO 
+        img.src = avatarUrl;
         img.alt = "AVATAR DO USUARIO";
+
+        p.innerText = username;
 
         button.type = "button";
         button.innerText = "Login";
@@ -119,9 +121,21 @@ export default class ComponentsDom{
          modal.style.display = "none";
     }
 
-    static posts(){
-        const main  = document.querySelector("main")
+    static async returnCardsForEach(){
+        const renderAllPosts = await UserRequest.getAllPosts();
+        /* console.log(renderAllPosts.data) */
+        const divPosts = document.createElement("div")
+    
+        renderAllPosts.data.forEach((posts) => {
+     
+            const cardsNews = this.posts(posts.avatarUrl, posts.username, posts.content) 
 
+            divPosts.append(cardsNews)
+        })
+        this.main.append(divPosts)
+    }
+
+    static async posts(avatarUrl, username, content){
         const tagUl    = document.createElement("ul")
         const boxTexto   = document.createElement("div")
         const inputTexto = document.createElement("input")
@@ -142,26 +156,16 @@ export default class ComponentsDom{
         textUsuario.classList.add("textUsuario")
 
         inputTexto.innerText = "Escreva o post!" // COLOCAR O INPUT DO USER
-        img.src = "./src/Images/Gato 2.png"; //COLOCAR O AVATAR DO USUARIO
+        img.src = avatarUrl;
         img.alt = "AVATAR DO USUARIO";
-        usuarioNickName.innerText = "Nick Name" // PUXAR O NOME DA PESSOA
-        textUsuario.innerText = " POST JÀ POSTADO " //PUXAR O QUE JÁ FOI POSTADO
+        usuarioNickName.innerText = username;
+        textUsuario.innerText = content;
 
         usuarioPost.append(usuarioNickName, textUsuario)
         posts.append(imgUsuario, img)
         boxTexto.append(inputTexto)
         tagUl.append(usuarioPost, posts, boxTexto)
-        main.append(tagUl)
-
-        const renderAllPosts = await UserRequest.getAllPosts();
-        /* console.log(renderAllPosts) */
-        const divPosts = document.createElement("div")
-    
-        renderAllPosts.forEach((posts) => {
-            const newPost = new NewUser(post.avatarUrl, post.username, post.content)
-            const cardsNews = newPost.posts()
-        })
-        divPosts.append(cardsNews)
-        this.main.append(divPosts)
+        this.main.append(tagUl)
     }
 }
+

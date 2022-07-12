@@ -6,7 +6,7 @@ import UserRequest from "../Controllers/User.Controllers.js";
         "email": "teste@Rook.com.br",
         "avatarUrl": "https://github.com/Rook.png",
         "password": "Teste123"
-});*/
+}); */
 
 /* const login = await LoginRequest.login({
     "email": "teste@Rook.com.br",
@@ -21,7 +21,8 @@ import UserRequest from "../Controllers/User.Controllers.js";
 /* const criarNovoPost = await UserRequest.novoPost(); */
 
 /* console.log(cadastrarUser); */
-/* console.log(login);  */
+/* console.log(login); */
 /* console.log(listarPorId); */
 /* console.log(deleteUsuario) */
 /* console.log(criarNovoPost); */
+

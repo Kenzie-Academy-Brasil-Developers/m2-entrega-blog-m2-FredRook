@@ -4,4 +4,5 @@ export default class NewUser {
         this.avatarUrl = avatarUrl;
         this.content = content;
    }
+
 }
